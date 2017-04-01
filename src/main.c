@@ -18,10 +18,14 @@ int main(int argc,char** argv)
     map[i]=(int*)malloc(sizeof(int)*w);
   generateMap(map);
   printMap(map);
+  int n=0;
   while(1)
   {
+    printf("%d\n",n);
     updateMap(map);
-    getchar();
+    printMap(map);
+    if(getchar()=='q') break;
+    n++;
   }
   return 0;
 }

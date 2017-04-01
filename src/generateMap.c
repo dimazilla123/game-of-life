@@ -2,8 +2,14 @@ int h,w;
 
 void generateMap(int** map)
 {
-  srand(time(((void*)0)));
-  for(int i=0;i<h;i++)
-    for(int j=0;j<w;j++)
-      map[i][j]=rand()%2;
+  printf("Enter N of life cells: ");
+  int n;
+  scanf("%d",&n);
+  int x,y;
+  for(int i=0;i<n;i++)
+  {
+    scanf("%d%d",&x,&y);
+    map[y][x]=1;
+  }
+    
 }

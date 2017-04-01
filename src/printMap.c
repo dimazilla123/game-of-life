@@ -9,4 +9,5 @@ void printMap(int** map)//выводит состояние
       else putchar(' ');
     putchar('\n');
   }
+  putchar('\n');
 }

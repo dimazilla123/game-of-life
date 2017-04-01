@@ -9,6 +9,8 @@ void updateMap(int **map)//обновление состояния
     for(int j=0;j<w;j++)
       if(isLive(map,i,j)) newmap[i][j]=1;
       else newmap[i][j]=0;
-  free(map);
-  map=newmap;
+  for(int i=0;i<h;i++)
+    for(int j=0;j<w;j++)
+      map[i][j]=newmap[i][j];
+  free(newmap);
 }
